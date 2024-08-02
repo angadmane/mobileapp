@@ -10,36 +10,36 @@ import {
 import React from "react";
 import { Link, useNavigation } from "expo-router";
 import FontAwesome from "@expo/vector-icons/build/FontAwesome";
-//import AIS140Menu from "(AIS140)";
+
 const GPS = () => {
   const navigation = useNavigation();
-  const PHais140 = () => {
-    console.log("nav to AIS140 ");
-    navigation.navigate("(GPStabmenu)//(AIS140)");
+  const PHmining = () => {
+    console.log("nav to Mining ");
+    navigation.navigate("mining");
   };
-  const PHnonais = () => {
-    console.log("nav to Non-AIS ");
-    navigation.navigate("(GPStabmenu)");
+  const PHtrans = () => {
+    console.log("nav to Trans ");
+    navigation.navigate("(Trans)");
   };
   return (
     <View style={styles.container}>
-      <TouchableOpacity style={styles.tile} onPress={PHais140}>
+      <TouchableOpacity style={styles.tile} onPress={PHmining}>
         <Image
-          source={require("../../assets/AIS140.png")}
+          source={require("../../../assets/AIS140.png")}
           style={styles.gpsImage}
         />
         <View>
-          <Text>AIS 140</Text>
+          <Text>Mining</Text>
         </View>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.tile} onPress={PHnonais}>
+      <TouchableOpacity style={styles.tile} onPress={PHtrans}>
         <Image
-          source={require("../../assets/AIS140.png")}
+          source={require("../../../assets/AIS140.png")}
           style={styles.gpsImage}
         />
         <View>
-          <Text>Non-AIS</Text>
+          <Text>Transportation</Text>
         </View>
       </TouchableOpacity>
     </View>

@@ -3,14 +3,13 @@ import React from "react";
 
 const mining = () => {
   return (
-    <ScrollView >
-      <View >
+    <ScrollView>
+      <View>
         <Image
-          source={require("../../../../assets/AIS140.png")}
+          source={require("../../../assets/AIS140.png")}
           style={styles.gpsImage}
         />
-       
-       
+
         <Text>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in
           ipsum consequat, volutpat nunc eu, tempus nisi. Curabitur laoreet

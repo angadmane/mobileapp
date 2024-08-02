@@ -1,23 +1,31 @@
-import { StyleSheet, Text, Touchable, View, TouchableOpacity,Image, Linking  } from "react-native";
-import { Link, useNavigation } from 'expo-router';
-import FontAwesome from '@expo/vector-icons/build/FontAwesome';
+import {
+  StyleSheet,
+  Text,
+  Touchable,
+  View,
+  TouchableOpacity,
+  Image,
+  Linking,
+} from "react-native";
+import { Link, useNavigation } from "expo-router";
+import FontAwesome from "@expo/vector-icons/build/FontAwesome";
 
 export default function Page() {
-  const onPress = () => console.log('Hello pressed');
-  const navigation = useNavigation()
-  const pressHandler = ()=>{
-    console.log('Via Whatsapp ')
-    navigation.navigate('(tabs)')
-  }
+  const onPress = () => console.log("Hello pressed");
+  const navigation = useNavigation();
+  const pressHandler = () => {
+    console.log("Via Whatsapp ");
+    navigation.navigate("(tabs)");
+  };
 
-  const pressHandlerPhone = ()=>{
-    console.log('Via Phone ')
-    navigation.navigate('LoginviaPhone')
-  }
-  const handleClickPhone = ()=>{
-    console.log('Via Phone ')
+  const pressHandlerPhone = () => {
+    console.log("Via Phone ");
+    navigation.navigate("(loginviaphone)");
+  };
+  const handleClickPhone = () => {
+    console.log("Via Phone ");
     //navigation.navigate('LoginviaPhone')
-  }
+  };
   return (
     <View style={styles.wrapper}>
       <View
@@ -50,10 +58,8 @@ export default function Page() {
       <View style={styles.main}>
         {/* <Text style={styles.title}>Laxmi Pandit GPS, Insurance</Text> */}
         <TouchableOpacity style={styles.button} onPress={pressHandler}>
-        <FontAwesome size={28} name="whatsapp" color="#ffffff" />
-          <Text style={styles.whatsappText}>
-             Login Via WhatsApp
-          </Text>
+          <FontAwesome size={28} name="whatsapp" color="#ffffff" />
+          <Text style={styles.whatsappText}>Login Via WhatsApp</Text>
           {/* <Text style={styles.phoneText}>Login Via WhatsApp</Text> */}
         </TouchableOpacity>
         <View>
@@ -93,10 +99,10 @@ export default function Page() {
 const styles = StyleSheet.create({
   wrapper: {
     padding: 20,
-    backgroundColor: '#EFFFFF',
+    backgroundColor: "#EFFFFF",
   },
   container: {
-    alignItems: 'center',
+    alignItems: "center",
   },
   logoContainer: {
     marginRight: 10,
@@ -104,69 +110,69 @@ const styles = StyleSheet.create({
   logo: {
     width: 110,
     height: 200,
-    resizeMode: 'contain',
+    resizeMode: "contain",
   },
   textContainer: {
     flex: 1,
   },
   main: {
-    alignItems: 'center',
+    alignItems: "center",
   },
   titlewelcome: {
     fontSize: 18,
-    marginHorizontal: 'auto',
-    textTransform: 'uppercase',
+    marginHorizontal: "auto",
+    textTransform: "uppercase",
   },
   titleslogon: {
     fontSize: 12,
   },
   title: {
     fontSize: 28,
-    fontWeight: 'bold',
-    textTransform: 'uppercase',
-    textAlignVertical: 'auto',
+    fontWeight: "bold",
+    textTransform: "uppercase",
+    textAlignVertical: "auto",
   },
   divider: {
     fontSize: 25,
-    fontWeight: 'bold',
-    color: '#aaa',
+    fontWeight: "bold",
+    color: "#aaa",
     marginTop: 25,
   },
   button: {
-    width: '100%',
-    alignItems: 'center',
-    backgroundColor: '#1ccfbe',
-    color: '#FFFFFF',
+    width: "100%",
+    alignItems: "center",
+    backgroundColor: "#1ccfbe",
+    color: "#FFFFFF",
     padding: 10,
     borderRadius: 4,
     marginTop: 25,
-    flexDirection: 'row',
-    justifyContent:'center'
+    flexDirection: "row",
+    justifyContent: "center",
   },
   whatsappText: {
     color: "#FFFFFF",
     marginLeft: 10, // Space between icon and text
   },
   button1: {
-    alignItems: 'center',
-    backgroundColor: '#FFFFFF',
+    alignItems: "center",
+    backgroundColor: "#FFFFFF",
     padding: 10,
-    width: '100%',
+    width: "100%",
     borderRadius: 4,
-    borderColor: '#138B7F',
+    borderColor: "#138B7F",
     borderWidth: 1,
     marginTop: 25,
-    flexDirection: 'row',
-    justifyContent:'center'
+    flexDirection: "row",
+    justifyContent: "center",
   },
-  whatsappclass: { color: '#FFFFFF' },
+  whatsappclass: { color: "#FFFFFF" },
   agriment: {
     fontSize: 14,
-    color: '#aaa',
+    color: "#aaa",
     marginTop: 25,
   },
   phoneText: {
-    color: '#1ccfbe',
+    color: "#1ccfbe",
     marginLeft: 10, // Space between icon and text
   },
 });
