@@ -5,33 +5,44 @@ import {
     Image,
     TouchableOpacity,
     Touchable,
+    Linking,
   } from "react-native";
   import React from "react";
+  import { Link, useNavigation } from 'expo-router';
+  import FontAwesome from '@expo/vector-icons/build/FontAwesome';
   
-  const AIS140 = () => {
-    const pressHandler = () => {
-      console.log("Mining");
-      navigation.navigate("Mining");
+  const GPS = () => {
+    const navigation = useNavigation()
+    const PHgCarrier = () => {
+      console.log("nav to g  Carrier ");
+      navigation.navigate('gCarrier');
+    };
+    const PHpCarrier = () => {
+      console.log("nav to pCarrier ");
+      navigation.navigate('paCarrier');
     };
     return (
       <View style={styles.container}>
-        <TouchableOpacity style={styles.tile} onPress={pressHandler}>
+
+        <TouchableOpacity style={styles.tile} onPress={PHgCarrier}>
           <Image
-            source={require("../../../assets/AIS140.png")}
+            source={require("../../../../../assets/AIS140.png")}
             style={styles.gpsImage}
           />
           <View>
-            <Text>Mining</Text>
+            <Text>Goods Carrier</Text>
           </View>
         </TouchableOpacity>
   
-        <View style={styles.tile}>
+       
+        <TouchableOpacity style={styles.tile} onPress={PHpCarrier}>
           <Image
-            source={require("../../../assets/AIS140.png")}
+            source={require("../../../../../assets/AIS140.png")}
             style={styles.gpsImage}
           />
-          <Text>Transportation</Text>
-        </View>
+          <View><Text>Passenger Carrier</Text></View>
+          </TouchableOpacity>
+        
       </View>
     );
   };
@@ -62,5 +73,5 @@ import {
     },
   });
   
-  export default AIS140;
+  export default GPS;
   

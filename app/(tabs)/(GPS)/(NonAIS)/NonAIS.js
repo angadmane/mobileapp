@@ -14,11 +14,11 @@ import {
   const GPS = () => {
     const navigation = useNavigation()
     const PHmining = () => {
-      console.log("nav to Mining ");
+      console.log("NON AIS ");
       navigation.navigate('mining');
     };
     const PHtrans = () => {
-      console.log("nav to Trans ");
+      console.log("Non ");
       navigation.navigate('(Trans)');
     };
     return (
@@ -30,7 +30,7 @@ import {
             style={styles.gpsImage}
           />
           <View>
-            <Text>Mining</Text>
+            <Text>Magnetic</Text>
           </View>
         </TouchableOpacity>
   
@@ -40,7 +40,7 @@ import {
             source={require("../../../../assets/AIS140.png")}
             style={styles.gpsImage}
           />
-          <View><Text>Transportation</Text></View>
+          <View><Text>Without Relay</Text></View>
           </TouchableOpacity>
         
       </View>

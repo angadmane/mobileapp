@@ -5,28 +5,23 @@ import {
     Image,
     TouchableOpacity,
     Touchable,
-    Linking,
   } from "react-native";
   import React from "react";
-  import { Link, useNavigation } from 'expo-router';
-  import FontAwesome from '@expo/vector-icons/build/FontAwesome';
   
-  const GPS = () => {
-    const navigation = useNavigation()
-    const PHmining = () => {
-      console.log("nav to Mining ");
-      navigation.navigate('mining');
+  const AIS140 = () => {
+    const pressHandler = () => {
+      console.log("Mining");
+      navigation.navigate('(AIS140)');
     };
-    const PHtrans = () => {
-      console.log("nav to Trans ");
-      navigation.navigate('(Trans)');
+    const pressHandlertransport = () => {
+      console.log("Mining");
+      navigation.navigate('(NonAIS)');
     };
     return (
       <View style={styles.container}>
-
-        <TouchableOpacity style={styles.tile} onPress={PHmining}>
+        <TouchableOpacity style={styles.tile} onPress={pressHandler}>
           <Image
-            source={require("../../../../assets/AIS140.png")}
+            source={require("../../../assets/AIS140.png")}
             style={styles.gpsImage}
           />
           <View>
@@ -34,15 +29,16 @@ import {
           </View>
         </TouchableOpacity>
   
-       
-        <TouchableOpacity style={styles.tile} onPress={PHtrans}>
+        <View style={styles.tile}>
+        <TouchableOpacity style={styles.tile} onPress={pressHandlertransport}>
           <Image
-            source={require("../../../../assets/AIS140.png")}
+            source={require("../../../assets/AIS140.png")}
             style={styles.gpsImage}
           />
-          <View><Text>Transportation</Text></View>
+
+          <Text>Transportation</Text>
           </TouchableOpacity>
-        
+        </View>
       </View>
     );
   };
@@ -73,5 +69,5 @@ import {
     },
   });
   
-  export default GPS;
+  export default AIS140;
   
