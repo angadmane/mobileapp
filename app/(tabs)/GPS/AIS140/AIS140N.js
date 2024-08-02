@@ -10,7 +10,7 @@ import {
 import React from "react";
 import { Link, useNavigation } from "expo-router";
 import FontAwesome from "@expo/vector-icons/build/FontAwesome";
-
+import AIS140 from "../../../../assets/AIS140.png";
 const GPS = () => {
   const navigation = useNavigation();
   const PHmining = () => {
@@ -24,20 +24,14 @@ const GPS = () => {
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.tile} onPress={PHmining}>
-        <Image
-          source={require("../../../assets/AIS140.png")}
-          style={styles.gpsImage}
-        />
+        <Image source={AIS140} style={styles.gpsImage} />
         <View>
           <Text>Mining</Text>
         </View>
       </TouchableOpacity>
 
       <TouchableOpacity style={styles.tile} onPress={PHtrans}>
-        <Image
-          source={require("../../../assets/AIS140.png")}
-          style={styles.gpsImage}
-        />
+        <Image source={AIS140} style={styles.gpsImage} />
         <View>
           <Text>Transportation</Text>
         </View>

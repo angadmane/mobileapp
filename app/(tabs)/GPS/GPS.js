@@ -10,30 +10,30 @@ import {
 import React from "react";
 import { Link, useNavigation } from "expo-router";
 import FontAwesome from "@expo/vector-icons/build/FontAwesome";
-import AIS140 from "../../../../assets/AIS140.png";
+import AIS140 from "../../../assets/AIS140.png";
 const GPS = () => {
   const navigation = useNavigation();
-  const PHgCarrier = () => {
-    console.log("nav to g  Carrier ");
-    navigation.navigate("gCarrier");
+  const PHais140 = () => {
+    console.log("nav to AIS140 ");
+    navigation.navigate("AIS140");
   };
-  const PHpCarrier = () => {
-    console.log("nav to pCarrier ");
-    navigation.navigate("paCarrier");
+  const PHnonais = () => {
+    console.log("nav to Non-AIS ");
+    navigation.navigate("(GPStabmenu)");
   };
   return (
     <View style={styles.container}>
-      <TouchableOpacity style={styles.tile} onPress={PHgCarrier}>
+      <TouchableOpacity style={styles.tile} onPress={PHais140}>
         <Image source={AIS140} style={styles.gpsImage} />
         <View>
-          <Text>Goods Carrier</Text>
+          <Text>AIS 140</Text>
         </View>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.tile} onPress={PHpCarrier}>
+      <TouchableOpacity style={styles.tile} onPress={PHnonais}>
         <Image source={AIS140} style={styles.gpsImage} />
         <View>
-          <Text>Passenger Carrier</Text>
+          <Text>Non-AIS</Text>
         </View>
       </TouchableOpacity>
     </View>

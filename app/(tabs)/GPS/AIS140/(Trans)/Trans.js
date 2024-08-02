@@ -10,36 +10,30 @@ import {
 import React from "react";
 import { Link, useNavigation } from "expo-router";
 import FontAwesome from "@expo/vector-icons/build/FontAwesome";
-//import AIS140Menu from "(AIS140)";
+import AIS140 from "../../../../../assets/AIS140.png";
 const GPS = () => {
   const navigation = useNavigation();
-  const PHais140 = () => {
-    console.log("nav to AIS140 ");
-    navigation.navigate("(GPStabmenu)//(AIS140)");
+  const PHgCarrier = () => {
+    console.log("nav to g  Carrier ");
+    navigation.navigate("gCarrier");
   };
-  const PHnonais = () => {
-    console.log("nav to Non-AIS ");
-    navigation.navigate("(GPStabmenu)");
+  const PHpCarrier = () => {
+    console.log("nav to pCarrier ");
+    navigation.navigate("paCarrier");
   };
   return (
     <View style={styles.container}>
-      <TouchableOpacity style={styles.tile} onPress={PHais140}>
-        <Image
-          source={require("../../assets/AIS140.png")}
-          style={styles.gpsImage}
-        />
+      <TouchableOpacity style={styles.tile} onPress={PHgCarrier}>
+        <Image source={AIS140} style={styles.gpsImage} />
         <View>
-          <Text>AIS 140</Text>
+          <Text>Goods Carrier</Text>
         </View>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.tile} onPress={PHnonais}>
-        <Image
-          source={require("../../assets/AIS140.png")}
-          style={styles.gpsImage}
-        />
+      <TouchableOpacity style={styles.tile} onPress={PHpCarrier}>
+        <Image source={AIS140} style={styles.gpsImage} />
         <View>
-          <Text>Non-AIS</Text>
+          <Text>Passenger Carrier</Text>
         </View>
       </TouchableOpacity>
     </View>
