@@ -8,18 +8,22 @@ import {
   Linking,
 } from "react-native";
 import React from "react";
-import { Link, useNavigation } from 'expo-router';
-import FontAwesome from '@expo/vector-icons/build/FontAwesome';
+import { Link, useNavigation } from "expo-router";
+import FontAwesome from "@expo/vector-icons/build/FontAwesome";
 
 const GPS = () => {
-  const navigation = useNavigation()
-  const pressHandler = () => {
+  const navigation = useNavigation();
+  const PHais140 = () => {
     console.log("nav to AIS140 ");
-    navigation.navigate('profile');
+    navigation.navigate("(GPS)");
+  };
+  const PHnonais = () => {
+    console.log("nav to Non-AIS ");
+    navigation.navigate("(GPS)");
   };
   return (
     <View style={styles.container}>
-      <TouchableOpacity style={styles.tile} onPress={pressHandler}>
+      <TouchableOpacity style={styles.tile} onPress={PHais140}>
         <Image
           source={require("../../assets/AIS140.png")}
           style={styles.gpsImage}
@@ -29,13 +33,16 @@ const GPS = () => {
         </View>
       </TouchableOpacity>
 
-      <View style={styles.tile}>
+      <TouchableOpacity style={styles.tile} onPress={PHnonais}>
         <Image
           source={require("../../assets/AIS140.png")}
           style={styles.gpsImage}
         />
-        <Text>Non-AIS</Text>
-      </View>
+        <View>
+         
+          <Text>Non-AIS</Text>
+        </View>
+      </TouchableOpacity>
     </View>
   );
 };
