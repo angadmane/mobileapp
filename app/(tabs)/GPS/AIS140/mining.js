@@ -1,16 +1,12 @@
 import { View, Text, StyleSheet, Image, ScrollView } from "react-native";
 import React from "react";
-
+import AIS140 from "../../../../assets/AIS140.png";
 const mining = () => {
   return (
-    <ScrollView >
-      <View >
-        <Image
-          source={require("../../../../assets/AIS140.png")}
-          style={styles.gpsImage}
-        />
-       
-       
+    <ScrollView>
+      <View>
+        <Image source={AIS140} style={styles.gpsImage} />
+
         <Text>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in
           ipsum consequat, volutpat nunc eu, tempus nisi. Curabitur laoreet

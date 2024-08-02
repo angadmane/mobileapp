@@ -5,7 +5,7 @@ import { Stack } from 'expo-router'
 const _layout = () => {
   return (
    <Stack>
-      <Stack.Screen name='(AIS140)' options={{headerShown:false}}/>
+       <Stack.Screen name='NonAIS' options={{headerShown:false}}/>
    </Stack>
   )
 }
