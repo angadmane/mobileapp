@@ -5,7 +5,7 @@ import { Stack } from "expo-router";
 const _layout = () => {
   return (
     <Stack>
-      <Stack.Screen name="GPS" />
+      <Stack.Screen name="GPSn" />
     </Stack>
   );
 };

@@ -10,30 +10,42 @@ import {
 import React from "react";
 import { Link, useNavigation } from "expo-router";
 import FontAwesome from "@expo/vector-icons/build/FontAwesome";
-import AIS140 from "../../../assets/AIS140.png";
+import AISimg from "../../../../assets/AIS140.png";
+
 const GPS = () => {
   const navigation = useNavigation();
-  const PHais140 = () => {
-    console.log("nav to AIS140 ");
-    navigation.navigate("AIS140");
+  const PHmag = () => {
+    console.log("nav to Mag ");
+    navigation.navigate("Mag");
   };
-  const PHnonais = () => {
-    console.log("nav to Non-AIS ");
-    navigation.navigate("(GPStabmenu)");
+  const PHwithoutRelay = () => {
+    console.log("nav to withoutRelay ");
+    navigation.navigate("withoutRelay");
+  };
+  const PHwithRelay = () => {
+    console.log("nav to withRelay ");
+    navigation.navigate("withRelay");
   };
   return (
     <View style={styles.container}>
-      <TouchableOpacity style={styles.tile} onPress={PHais140}>
-        <Image source={AIS140} style={styles.gpsImage} />
+      <TouchableOpacity style={styles.tile} onPress={PHmag}>
+      <Image source={AISimg} style={styles.gpsImage} />
         <View>
-          <Text>AIS 140</Text>
+          <Text>Magnetic</Text>
         </View>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.tile} onPress={PHnonais}>
-        <Image source={AIS140} style={styles.gpsImage} />
+      <TouchableOpacity style={styles.tile} onPress={PHwithoutRelay}>
+      <Image source={AISimg} style={styles.gpsImage} />
         <View>
-          <Text>Non-AIS</Text>
+          <Text>Non-AIS Without Relay</Text>
+        </View>
+      </TouchableOpacity>
+
+      <TouchableOpacity style={styles.tile} onPress={PHwithRelay}>
+      <Image source={AISimg} style={styles.gpsImage} />
+        <View>
+          <Text>Non-AIS With Relay</Text>
         </View>
       </TouchableOpacity>
     </View>
