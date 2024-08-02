@@ -5,13 +5,17 @@ import {
   Image,
   TouchableOpacity,
   Touchable,
+  Linking,
 } from "react-native";
 import React from "react";
+import { Link, useNavigation } from 'expo-router';
+import FontAwesome from '@expo/vector-icons/build/FontAwesome';
 
 const GPS = () => {
+  const navigation = useNavigation()
   const pressHandler = () => {
-    console.log("Via Phone ");
-    navigation.navigate("(GPS)");
+    console.log("nav to AIS140 ");
+    navigation.navigate('profile');
   };
   return (
     <View style={styles.container}>
@@ -56,8 +60,8 @@ const styles = StyleSheet.create({
     borderRadius: 15,
   },
   gpsImage: {
-    width: "100%",
-    height: "100%",
+    width: "80%",
+    height: "80%",
     resizeMode: "contain",
   },
 });
