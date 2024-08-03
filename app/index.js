@@ -26,9 +26,6 @@ export default function Page() {
     console.log("Via Phone ");
     //navigation.navigate('LoginviaPhone')
   };
-  const makeCallHandler = ()=>{
-    console.log('call to number via app call')
-  }
   return (
     <View style={styles.wrapper}>
       <View
@@ -72,11 +69,6 @@ export default function Page() {
         <TouchableOpacity style={styles.button1} onPress={pressHandlerPhone}>
           <FontAwesome size={28} name="phone" color="#138B7F" />
           <Text style={styles.phoneText}>Login Via Phone</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={styles.button1} onPress={makeCallHandler}>
-          <FontAwesome size={28} name="phone" color="#138B7F" />
-          <Text style={styles.phoneText}>Call on xxxxx89898</Text>
         </TouchableOpacity>
 
         <Text style={styles.agriment}>

@@ -5,6 +5,7 @@ import FontAwesome from "@expo/vector-icons/FontAwesome";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 
 const _layout = () => {
+  const [headertitle, setHeaderTitle] = React.useState("G P S");
   return (
     <Tabs
       screenOptions={{
@@ -38,6 +39,7 @@ const _layout = () => {
           tabBarIcon: ({ color }) => (
             <MaterialIcons name="gps-fixed" size={28} color={color} />
           ),
+          headerTitle: headertitle,
         }}
       />
       <Tabs.Screen

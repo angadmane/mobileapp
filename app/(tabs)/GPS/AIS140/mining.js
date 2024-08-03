@@ -9,8 +9,8 @@ const mining = () => {
         <View style={styles.tile}>
         <Image source={AISimg} style={styles.gpsImage} />
         </View>
-        <View>
-        <Text style={styles.text}>
+        <Text>HIII</Text>
+        <Text>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in
           ipsum consequat, volutpat nunc eu, tempus nisi. Curabitur laoreet
           efficitur ornare. Donec a libero venenatis odio molestie faucibus sed
@@ -60,27 +60,19 @@ const mining = () => {
   );
 };
 const styles = StyleSheet.create({
-  safeArea: {
-    flexGrow: 1,
-    justifyContent:'center',
-    paddingBottom:40
-  },
-  scrollContainer: {
-    flexGrow: 1,
-    marginBottom:10,
-  },
   container: {
-    flex:1,
-    padding:15,
-    backgroundColor: '#Efffff',
+   flex:1,
+   padding:10,
+   marginBottom:300,
   },
   tile: {
-    Width: "80%",
-    height: 200,
+    Width: "30%",
+    height: "20%",
     backgroundColor: "#f3f7ff",
     justifyContent: "center",
     alignItems: "center",
     borderWidth: 1,
+    margin: "5%",
     borderColor: "black",
     borderRadius: 15,
     margin:10
