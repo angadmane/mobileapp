@@ -7,7 +7,7 @@ const _layout = () => {
   return (
     <Stack>
         <Stack.Screen name='index' options={{contentStyle:{backgroundColor:'#EFFFFF'}}} />
-        <Stack.Screen name='(tabs)' options={{headerShown:true}} />
+        <Stack.Screen name='(tabs)' options={{headerShown:false}} />
     </Stack>
   )
 }
