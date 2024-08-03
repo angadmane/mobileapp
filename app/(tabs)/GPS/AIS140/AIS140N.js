@@ -26,7 +26,7 @@ const GPS = () => {
       <TouchableOpacity style={styles.tile} onPress={PHmining}>
         <Image source={AIS140} style={styles.gpsImage} />
         <View>
-          <Text>Mining</Text>
+          <Text>Mining1</Text>
         </View>
       </TouchableOpacity>
 
@@ -47,6 +47,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "Top",
     height: "100%",
+    backgroundColor: '#Efffff',
   },
   tile: {
     width: "40%",

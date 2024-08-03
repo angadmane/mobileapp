@@ -47,6 +47,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "Top",
     height: "100%",
+    backgroundColor: '#Efffff',
   },
   tile: {
     width: "40%",

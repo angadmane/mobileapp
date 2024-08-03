@@ -26,6 +26,9 @@ export default function Page() {
     console.log("Via Phone ");
     //navigation.navigate('LoginviaPhone')
   };
+  const makeCallHandler = ()=>{
+    console.log('call to number via app call')
+  }
   return (
     <View style={styles.wrapper}>
       <View
