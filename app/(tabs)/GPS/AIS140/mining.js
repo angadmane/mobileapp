@@ -9,7 +9,7 @@ const mining = () => {
         <View style={styles.tile}>
         <Image source={AISimg} style={styles.gpsImage} />
         </View>
-        <Text>HIII</Text>
+        <View>
         <Text>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in
           ipsum consequat, volutpat nunc eu, tempus nisi. Curabitur laoreet
