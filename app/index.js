@@ -6,7 +6,6 @@ import {
   TouchableOpacity,
   Image,
   Linking,
-  Platform,
 } from "react-native";
 import { Link, useNavigation } from "expo-router";
 import FontAwesome from "@expo/vector-icons/build/FontAwesome";
@@ -21,22 +20,11 @@ export default function Page() {
 
   const pressHandlerPhone = () => {
     console.log("Via Phone ");
-    navigation.navigate("(loginbyphone)");
+    navigation.navigate("(loginviaphone)");
   };
   const handleClickPhone = () => {
     console.log("Via Phone ");
-    navigation.navigate("(loginbyphone)");
     //navigation.navigate('LoginviaPhone')
-  };
-  const makeCallHandler = () => {
-    let phonenumber = "";
-    if (Platform.OS == "android") {
-      phonenumber = "tel:${7020542033}";
-    } else {
-      phonenumber = "telprompt:${7020542033}";
-    }
-
-    Linking.openURL(phonenumber);
   };
   return (
     <View style={styles.wrapper}>
@@ -81,11 +69,6 @@ export default function Page() {
         <TouchableOpacity style={styles.button1} onPress={pressHandlerPhone}>
           <FontAwesome size={28} name="phone" color="#138B7F" />
           <Text style={styles.phoneText}>Login Via Phone</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={styles.button1} onPress={makeCallHandler}>
-          <FontAwesome size={28} name="phone" color="#138B7F" />
-          <Text style={styles.phoneText}>Call on xxxxx89898</Text>
         </TouchableOpacity>
 
         <Text style={styles.agriment}>
